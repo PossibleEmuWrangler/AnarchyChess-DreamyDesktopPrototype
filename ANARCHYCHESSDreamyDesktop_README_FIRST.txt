@@ -29,13 +29,26 @@ Getting Started
 
 Once the program has started, go into the configuration.
 
-Piece set and Theme should be set to "Classic Wooden" or "Figurine"
+Theme should be set to "Figurine" (preferred but 2d) or "Classic Wooden" (3d but knook "piece" is currently a partial rook).
+Engine has to be set to "" (default should be "dreamer") The engine(s) havent been coded for the new piece yet and the engine can "undo" moves it doesnt recognise.
 
-Games need to be set as Human vs human. The engine(s) havent been coded for
-the new piece yet. 
-Engine has to be set to "" (default should be "dreamer")
+Go back to main menu and select a new game
+Games need to be set as Human vs human. Set difficulty Easy and Level 1 
+
+Start Game
+
+For the first run do the moves:
+
+  e4 d5
+  exd5 c5
+  dxc6 f6
+  cxb7 f5 (alternately kf7)
+  bxa8=O.
 
 Promotion dialog doesnt have correct image for Knook yet, see dialog text as it says how to promote to knook.
+On the board the Knook should have a K in the middle of the rook piece.
+
+Quit game, and then start a new game. 
 
 
 

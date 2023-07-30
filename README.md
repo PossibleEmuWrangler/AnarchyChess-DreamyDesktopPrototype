@@ -1,9 +1,13 @@
-# DreamChess
+# DreamChess - AnarchyChess-DreamyDesktopPrototype
 
 [![Build status](https://travis-ci.org/dreamchess/dreamchess.svg?branch=master)](https://travis-ci.org/dreamchess/dreamchess)
 [![Build status](https://ci.appveyor.com/api/projects/status/9c30h9u3p9bywpf0/branch/master?svg=true)](https://ci.appveyor.com/project/waltervn/dreamchess/branch/master)
 
 ## About
+
+Read ANARCHYCHESSDreamyDesktop_README_FIRST.txt
+
+This repository is a deep replication fork of Dreamchess, so i dont inadvertantly push code to their project. AnarchyChess-DreamyDesktop will be a fork from them which i plan to change. 
 
 DreamChess is an open source chess game. It comes with its own
 engine called Dreamer.

@@ -121,6 +121,139 @@ Commands
     ./debian/dreamchess/usr/games/dreamchess
 
 
+
 Files on installed system.
 Image files and stuff the program uses are in /usr/share/games/dreamchess/
+
+==========
+Appendix A:
+Installation for Raspberry Pi 400 (Package install dreamchess, localbuild anarchychess exe from anarchychess-dreamydesktopprototype repository	)- Last updated 31Jul2023
+
+The aim of these steps is to get a repeatable steps for users to download the build and get it
+running on their computer. 
+
+
+
+RaspberryPi Imager v1.7.5 used, Raspberry Pi OS 32-bit Debian Bullseye Released 2023-05-03 used. 
+
+Assumed User has full access to system and created initial account which is used to do install.
+System updated to latest as part of initial install
+ 
+
+1. Open a command prompt up
+mkdir DreamChessBuild
+
+2. Edit file to allow downloading of package sources
+sudo nano /etc/apt/sources.list
+
+3. remove "#" from first column on third line and save with CTRL-O
+Note: line to read "deb-src"... instead of "#deb-src"...
+
+4. exit nano with CTRL-X
+
+5. run apt program so it knows about source URIs
+sudo apt update
+
+5. download source using apt command (as regular user, not root so we dont need sudo) 
+apt source dreamchess
+
+6. install dreamchess onto system using OS package manager.
+sudo apt install dreamchess
+
+7. test run dreamchess to confirm it runs on system natively
+dreamchess
+
+8. Start a new Human vs human game on original install
+New Game
+Players -> Human vs Human
+Start Game
+
+9. e4 e5 Ke2 Ke7 and Quit game
+Right click -> Quit Game. 
+Quit to Title -> Ok
+
+
+10. Change configuration for Theme and remove engine
+Click Configuration.
+Change theme to "Figureine"
+Delete all text in Engine textbox
+Click Ok
+
+11.Start a new game with figureine piece set
+Board loads using 2D pieces.
+
+12. e4 e5 Ke2 Ke7 and Quit game
+Right click -> Quit Game. 
+Quit to Title -> Ok
+
+13. Quit Dreamchess
+Window closes and back to command prompt
+
+
+14. Get code from AnarchyChess-DreamyDesktopPrototype repository
+NOTE: This will eventually be changed to deal with packages and zips,
+
+Open up chromium web browser and go to https://github.com/PossibleEmuWrangler/AnarchyChess-DreamyDesktopPrototype
+
+The page should have a Green icon with "Code" and a down arrow.
+
+Click on the down arrow and click on "Download ZIP"
+
+AnarchyChess-DreamyDesktopPrototype-main.zip should now be in your Downloads file
+
+15. Move code to folder to build from
+Move ZIP file to DreamChessBuild directory created earlier (either by command line or file explorer)
+
+
+16. Unzip ZIP file
+from the command line, "unzip AnarchyChess-DreamyDesktopPrototype-main.zip" or "unzip An<TAB>" for command line to complete the filename via TAB shortcut
+
+
+
+17 Using the file explorer copy all files and subdirectories in AnarchyChess folder into dreamchess-0.3.0 folder, overwriting any existing files.
+
+
+18 Change command prompt to dreamchess-0.3.0 subdirectory.
+cd dreamchess-0.3.0
+
+
+19. Build (without required dependencies installed)
+dpkg-buildpackage -b -uc -us
+
+A print out of unmet dependencies is shown
+
+
+19 Download dependencies required to build
+sudo apt install bison cmake debhelper-compat flex libglew-dev libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev
+
+
+20. Build (without required dependencies installed)
+dpkg-buildpackage -b -uc -us
+
+
+21 Install app, data and dbgsym via package manager
+sudo dpkg -i ../dreamchess_0.3.0-1_armhf.deb
+sudo dpkg -i ../dreamchess-data_0.3.0-1_all.deb
+sudo dpkg -i ../dreamchess-dbgsym_0.3.0-1_armhf.deb
+
+22 Run Dreamchess
+dreamchess
+
+(AnarchChess 0.3.0 Development) is printed on command line and GUI shows red spraypaint.
+
+23 Update configuration
+Configuration -> Engine = ""
+
+24. Start New game of Human vs Human
+Board is shown with 2d characters 
+
+25. Begin playtest game
+
+ O is Knooks character in Algebraic notation
+1. e4 d5
+2. exd5 c5
+3. dxc6 f6
+4. cxb7 f5
+5. bxa8=O f4
+6. Ob6   (Note: O is shown as boxy square, known bug)
 

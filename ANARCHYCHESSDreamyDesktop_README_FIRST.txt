@@ -140,8 +140,9 @@ Assumed User has full access to system and created initial account which is used
 System updated to latest as part of initial install
  
 
-1. Open a command prompt up
+1. Open a command prompt up, create a directory to build in and cd into it
 mkdir DreamChessBuild
+cd DreamchessBuild
 
 2. Edit file to allow downloading of package sources
 sudo nano /etc/apt/sources.list
@@ -256,4 +257,5 @@ Board is shown with 2d characters
 4. cxb7 f5
 5. bxa8=O f4
 6. Ob6   (Note: O is shown as boxy square, known bug)
+
 

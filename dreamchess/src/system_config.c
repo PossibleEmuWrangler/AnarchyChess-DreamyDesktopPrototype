@@ -129,14 +129,14 @@ void config_init(void) {
 	option_add_value(option, "6x", NULL);
 	option_add_value(option, "8x", NULL);
 
-	option = option_group_add_string(config, "first_engine");
-	option->string = strdup("dreamer");
+	option = option_group_add_string(config, "first_engine"); 
+	option->string = strdup(""); /* ACTODO: Confirm setting to "" instead of "dreamer" doesnt cause crashing */
 
 	option = option_group_add_option(config, "game_mode");
+	option_add_value(option, "Human vs. Human", NULL); /* ACTODO: Confirm setting to "" instead of "dreamer" doesnt cause crashing */
 	option_add_value(option, "Human vs. CPU", NULL);
 	option_add_value(option, "CPU vs. Human", NULL);
-	option_add_value(option, "Human vs. Human", NULL);
-
+ 
 	option = option_group_add_option(config, "difficulty");
 	option_add_value(option, "Easy", NULL);
 	option_add_value(option, "Normal", NULL);

@@ -51,9 +51,9 @@
 #include "ui_sdlgl_3d.h"
 #include <gamegui.h>
 
-#define GAME_TYPE_HUMAN_VS_CPU 0
-#define GAME_TYPE_CPU_VS_HUMAN 1
-#define GAME_TYPE_HUMAN_VS_HUMAN 2
+#define GAME_TYPE_HUMAN_VS_HUMAN 0
+#define GAME_TYPE_HUMAN_VS_CPU 1
+#define GAME_TYPE_CPU_VS_HUMAN 2
 
 #define LEFT (1 << 0)
 #define RIGHT (1 << 1)

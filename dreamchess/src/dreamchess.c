@@ -480,7 +480,7 @@ int main(int argc, char **argv) {
 
 	ui = &ui_sdlgl;
 
-	printf("AnarchyChess %s Development\n", g_version);
+	printf("AnarchyChess DreamyDesktop v0.8.1 - Based off Dreamchess %s Development\n", g_version);
 
 	parse_options(argc, argv, &ui, &cl_options);
 	config_init();

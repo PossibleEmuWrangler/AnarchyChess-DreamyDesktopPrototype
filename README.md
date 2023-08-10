@@ -1,7 +1,10 @@
-# DreamChess - AnarchyChess-DreamyDesktopPrototype
+# DreamChess - AnarchyChess-DreamyDesktopPrototype (Repository in maintenance mode)
 
 [![Build status](https://travis-ci.org/dreamchess/dreamchess.svg?branch=master)](https://travis-ci.org/dreamchess/dreamchess)
 [![Build status](https://ci.appveyor.com/api/projects/status/9c30h9u3p9bywpf0/branch/master?svg=true)](https://ci.appveyor.com/project/waltervn/dreamchess/branch/master)
+
+
+This repository is now in maintenance mode. Please refer any new bugs etc to the AnarchyChess-DreamyDesktop project (may not have been created yet). This repository was for a cowboy coding session to prove a proof of concept and ignored things like branches and meaningful commitstatements. its codebase will be migrated to a real repository soon before further changes are made to the project. 
 
 ## About
 

@@ -35,7 +35,7 @@ static char *thanks[] = {"Special Thanks To",
 						 "Garry Chess"
 						 , NULL};
 
-static char *copyright[] = {"AnarchyChess DreamyDesktopPrototype 0.7", "\xa9 2023", "https://www.google.com/search?channel=fs&q=En+passant - Google En Passant", NULL};
+static char *copyright[] = {"AnarchyChess DreamyDesktopPrototype 0.8.6", "\xa9 2023", "https://www.google.com/search?channel=fs&q=En+passant - Google En Passant", NULL};
 
 static char *music[] = {"Music", "DreamChess Authors", NULL};
 
